@@ -1,5 +1,7 @@
 ## Overview
 
+[![Build Status](https://secure.travis-ci.org/pwelch/chef-ruby.svg)](http://travis-ci.org/pwelch/chef-ruby)
+
 Chef cookbook to install [Ruby](https://www.ruby-lang.org/en/).
 
 This cookbook assumes you want to compile Ruby from source and only have
@@ -30,4 +32,4 @@ Ruby versions updated [here](https://www.ruby-lang.org/en/downloads/).
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-Source code availabe [here](https://github.com/pwelch/chef-ruby)
+Source code available [here](https://github.com/pwelch/chef-ruby)
