@@ -1,6 +1,6 @@
 ## Overview
 
-[![Build Status](https://secure.travis-ci.org/pwelch/chef-ruby.svg)](http://travis-ci.org/pwelch/chef-ruby)
+[![Build Status](https://secure.travis-ci.org/pwelch/chef-ruby_compile.svg)](http://travis-ci.org/pwelch/chef-ruby_compile)
 
 Chef cookbook to install [Ruby](https://www.ruby-lang.org/en/).
 
@@ -11,16 +11,16 @@ a single Ruby version on your system.
 
 Basic:
 ```ruby
-include_recipe 'ruby::default'
+include_recipe 'ruby_compile::default'
 ```
 
 Changing Ruby Version:
 ```ruby
-node.default[:ruby][:ruby_version]      = '2.2.1'
-node.default[:ruby][:major_version]     = '2.2'
-node.default[:ruby][:source][:checksum] = '5a4de38068eca8919cb087d338c0c2e3d72c9382c804fb27ab746e6c7819ab28'
-node.default[:ruby][:install_gems]      = %w{ bundler }
-node.default[:ruby][:extra_pkgs]        = []
+node.default[:ruby_compile][:ruby_version]      = '2.2.1'
+node.default[:ruby_compile][:major_version]     = '2.2'
+node.default[:ruby_compile][:source][:checksum] = '5a4de38068eca8919cb087d338c0c2e3d72c9382c804fb27ab746e6c7819ab28'
+node.default[:ruby_compile][:install_gems]      = %w{ bundler }
+node.default[:ruby_compile][:extra_pkgs]        = []
 ```
 
 Ruby versions updated [here](https://www.ruby-lang.org/en/downloads/).
@@ -32,4 +32,4 @@ Ruby versions updated [here](https://www.ruby-lang.org/en/downloads/).
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-Source code available [here](https://github.com/pwelch/chef-ruby)
+Source code available [here](https://github.com/pwelch/chef-ruby_compile)
