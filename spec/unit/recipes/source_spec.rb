@@ -23,6 +23,8 @@ describe 'ruby::source' do
     end
 
     it 'downloads ruby source code file' do
+      allow(::File).to receive(:exist?).and_call_original
+      allow(::File).to receive(:exist?).with('/usr/local/bin/ruby').and_return(false)
       expect(chef_run).to create_remote_file(chef_run.node.ruby.source.url).with(
         :source   => chef_run.node.ruby.source.url,
         :path     => chef_run.node.ruby.source.src_filepath,
@@ -31,10 +33,14 @@ describe 'ruby::source' do
     end
 
     it 'executes bash command to unarchive ruby source' do
+      allow(::File).to receive(:exist?).and_call_original
+      allow(::File).to receive(:exist?).with('/usr/local/bin/ruby').and_return(false)
       expect(chef_run).to run_bash('unarchive_ruby_source')
     end
 
     it 'executes bash command to ruby source' do
+      allow(::File).to receive(:exist?).and_call_original
+      allow(::File).to receive(:exist?).with('/usr/local/bin/ruby').and_return(false)
       expect(chef_run).to run_bash('compile_ruby')
     end
 
