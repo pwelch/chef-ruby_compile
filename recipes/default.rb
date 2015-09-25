@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: ruby
+# Cookbook Name:: ruby_compile
 # Recipe:: default
 #
 
-include_recipe 'ruby::source'
+include_recipe 'ruby_compile::source'
