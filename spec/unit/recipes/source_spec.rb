@@ -7,7 +7,7 @@ require 'spec_helper'
 
 describe 'ruby_compile::source' do
   context 'When all attributes are default, on Ubuntu platform' do
-    let(:chef_run) do
+    cached(:chef_run) do
       runner = ChefSpec::ServerRunner.new(:platform => 'ubuntu', :version => '14.04')
       runner.converge(described_recipe)
     end
@@ -25,10 +25,10 @@ describe 'ruby_compile::source' do
     it 'downloads ruby source code file' do
       allow(::File).to receive(:exist?).and_call_original
       allow(::File).to receive(:exist?).with('/usr/local/bin/ruby').and_return(false)
-      expect(chef_run).to create_remote_file(chef_run.node.ruby_compile.source.url).with(
-        :source   => chef_run.node.ruby_compile.source.url,
-        :path     => chef_run.node.ruby_compile.source.src_filepath,
-        :checksum => chef_run.node.ruby_compile.source.checksum
+      expect(chef_run).to create_remote_file(chef_run.node[:ruby_compile][:source][:url]).with(
+        :source   => chef_run.node[:ruby_compile][:source][:url],
+        :path     => chef_run.node[:ruby_compile][:source][:src_filepath],
+        :checksum => chef_run.node[:ruby_compile][:source][:checksum]
       )
     end
 

@@ -8,6 +8,10 @@ driver_config:
 provisioner:
   name: chef_zero
 
+verifier:
+  name: inspec
+  format: documentation
+
 platforms:
 - name: ubuntu-12.04
   driver_config:
@@ -19,5 +23,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[ruby::default]
+      - recipe[ruby_compile::default]
     attributes:

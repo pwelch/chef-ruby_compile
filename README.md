@@ -16,9 +16,9 @@ include_recipe 'ruby_compile::default'
 
 Changing Ruby Version:
 ```ruby
-node.default[:ruby_compile][:ruby_version]      = '2.2.1'
-node.default[:ruby_compile][:major_version]     = '2.2'
-node.default[:ruby_compile][:source][:checksum] = '5a4de38068eca8919cb087d338c0c2e3d72c9382c804fb27ab746e6c7819ab28'
+node.default[:ruby_compile][:ruby_version]      = '2.3.1'
+node.default[:ruby_compile][:major_version]     = '2.3'
+node.default[:ruby_compile][:source][:checksum] = 'b87c738cb2032bf4920fef8e3864dc5cf8eae9d89d8d523ce0236945c5797dcd'
 node.default[:ruby_compile][:install_gems]      = %w{ bundler }
 node.default[:ruby_compile][:extra_pkgs]        = []
 ```

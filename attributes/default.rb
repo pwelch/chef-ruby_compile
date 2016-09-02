@@ -4,9 +4,9 @@
 # Attribute:: default
 #
 
-default[:ruby_compile][:ruby_version]      = '2.1.5'
-default[:ruby_compile][:major_version]     = '2.1'
-default[:ruby_compile][:source][:checksum] = '4305cc6ceb094df55210d83548dcbeb5117d74eea25196a9b14fa268d354b100'
+default[:ruby_compile][:ruby_version]      = '2.3.1'
+default[:ruby_compile][:major_version]     = '2.3'
+default[:ruby_compile][:source][:checksum] = 'b87c738cb2032bf4920fef8e3864dc5cf8eae9d89d8d523ce0236945c5797dcd'
 default[:ruby_compile][:install_gems]      = %w{ bundler }
 default[:ruby_compile][:extra_pkgs]        = []
 
